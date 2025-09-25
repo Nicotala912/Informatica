@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego de la Edad</title>
+</head>
+<body>
+
+    <h1>Verificar Edad</h1>
+    <button onclick="chequearEdad()">Verificar edad</button>
+
+    <script>
+        function chequearEdad() {
+        
+            edadTexto = prompt("Escribe tu edad:");
+
+           
+            edadNumero = parseInt(edadTexto);
+            if (edadNumero >= 18) {
+                alert("Acceso PERMITIDO. Eres mayor de edad.");
+            } else {
+                alert("Acceso DENEGADO. Eres menor de edad.");
+            }
+        }
+    </script>
+
+</body>
+</html>

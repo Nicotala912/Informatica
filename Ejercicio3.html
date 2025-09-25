@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Promedio</title>
+</head>
+<body>
+
+    <h1>Calcular Promedio</h1>
+    <button onclick="sacarPromedio()">Calcular promedio</button>
+
+    <script>
+        function sacarPromedio() {
+            nota1 = prompt("Escribe la primera nota:");
+            nota2 = prompt("Escribe la segunda nota:");
+            nota3 = prompt("Escribe la tercera nota:");
+
+            n1 = parseFloat(nota1);
+            n2 = parseFloat(nota2);
+            n3 = parseFloat(nota3);
+            
+            suma = n1 + n2 + n3;
+            resultado = suma / 3;
+
+            
+            if (resultado >= 6) {
+                alert("¡APROBADO! Tu promedio es: " + resultado);
+            } else {
+                alert("DESAPROBADO. Tu promedio es: " + resultado);
+            }
+        }
+    </script>
+
+</body>
+</html>
