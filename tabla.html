@@ -1,38 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Colores</title>
 </head>
-<body><h1>Tablas en html</h1>
-        <table border ="1"
-            <th>Nombres</th>
--
-            </th>Curso<th>
-            </tr>
-            <tr>
-            <td>LLOBACA<td>
-                <td>3-C</td>
-                </tr>
-                <td>Caballo</td>
-                </td>3-C</td>
+<body>
 
-                <td>Silvana</td>
-                </td>3-C<td>
-                
-                    <td>Kiara<td>
-                </td>3-C<td>
-            
-                    <td>El dino</td>
-                </td>3-C<td>
-                
-                    <td>Baldomero<td>
-                </td>3-H<td>
-            
-        </table>
-    
+    <h1>Cambia los colores</h1>
+    <button onclick="setModo('dia')">Modo Día (Blanco)</button>
+    <button onclick="setModo('noche')">Modo Noche (Oscuro)</button>
+    <button onclick="setModo('loco')">Modo Loco (Verde)</button>
+
+    <script>
+        function setModo(modo) {
+            const body = document.body;
+
+            if (modo === 'dia') {
+                body.style.backgroundColor = '#FFFFFF'; 
+                body.style.color = '#000000'; 
+            } else if (modo === 'noche') {
+                body.style.backgroundColor = '#333333'; 
+                body.style.color = '#FFFFFF'; 
+            } else if (modo === 'loco') {
+                body.style.backgroundColor = '#00FF00'; 
+                body.style.color = '#FF00FF'; 
+            }
+        }
+    </script>
+
 </body>
 </html>
-</h1>
