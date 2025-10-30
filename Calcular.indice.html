@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora IMC</title>
+</head>
+<body>
+
+    <h2>Calculadora de IMC</h2>
+    <label>Peso (en Kg):</label>
+    <input type="number" id="peso" placeholder="Ej: 70">
+    <br>
+    <label>Altura (en Metros):</label>
+    <input type="number" id="altura" placeholder="Ej: 1.75">
+    <br>
+    <button onclick="calcularIMC()">Calcular IMC</button>
+
+    <h3 id="resultadoIMC"></h3>
+    <p id="interpretacion"></p>
+
+    <script>
+        function calcularIMC() {
+            
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+
+            const imc = peso / (altura * altura);
+
+         
+             const resultado = document.getElementById('resultadoIMC');
+            resultado.innerText = "Tu IMC es: " + imc.toFixed(2);
+
+           
+            const interpretacion = document.getElementById('interpretacion');
+            if (imc < 18.5) {
+                interpretacion.innerText = "Interpretación: Bajo peso.";
+                interpretacion.style.color = "blue";
+            } else if (imc >= 18.5 && imc <= 24.9) {
+                interpretacion.innerText = "Interpretación: Peso normal.";
+                interpretacion.style.color = "green";
+            } else if (imc >= 25 && imc <= 29.9) {
+                interpretacion.innerText = "Interpretación: Sobrepeso.";
+                interpretacion.style.color = "orange";
+            } else { 
+                interpretacion.innerText = "Interpretación: Obesidad.";
+                interpretacion.style.color = "red";
+            }
+        }
+    </script>
+
+</body>
+</html>
